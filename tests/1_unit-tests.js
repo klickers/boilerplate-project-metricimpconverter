@@ -30,17 +30,17 @@ suite("convertHandler.getNum() tests", function () {
     assert.equal(
       convertHandler.getNum("3.25/4mi"),
       3.25 / 4,
-      "fraction with decimal not read correctly"
+      "fraction with numerator decimal not read correctly"
     );
     assert.equal(
       convertHandler.getNum("325/4.5mi"),
       325 / 4.5,
-      "fraction with decimal not read correctly"
+      "fraction with denominator decimal not read correctly"
     );
     assert.equal(
       convertHandler.getNum("3.25/4.5mi"),
       3.25 / 4.5,
-      "fraction with decimal not read correctly"
+      "fraction with double decimals not read correctly"
     );
   });
   test("getNum() returns an error on a double fraction", function () {
