@@ -25,8 +25,7 @@ function ConvertHandler() {
   this.getUnit = function (input) {
     let unit = input.match(/[a-zA-Z]+/);
 
-    if (unit == null || (unit != "gal" && unit != "lbs" && unit != "mi"))
-      return "error";
+    if (unit == null || this.spelledUnits[unit] == null) return "error";
     else return unit[0];
   };
 

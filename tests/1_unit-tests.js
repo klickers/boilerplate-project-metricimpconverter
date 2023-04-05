@@ -79,7 +79,7 @@ suite("convertHandler.getUnit() tests", function () {
   });
   test("getUnit() returns an error for an invalid input unit", function () {
     assert.equal(
-      convertHandler.getUnit("34km"),
+      convertHandler.getUnit("34kmwe"),
       "error",
       "invalid input unit not returning error"
     );
