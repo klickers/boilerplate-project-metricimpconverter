@@ -7,6 +7,9 @@ function ConvertHandler() {
     gal: "gallons",
     lbs: "pounds",
     mi: "miles",
+    L: "liters",
+    kg: "kilograms",
+    km: "kilometers",
   };
 
   this.getNum = function (input) {
@@ -35,6 +38,12 @@ function ConvertHandler() {
         return "kg";
       case "mi":
         return "km";
+      case "L":
+        return "gal";
+      case "kg":
+        return "lbs";
+      case "km":
+        return "mi";
     }
   };
 
