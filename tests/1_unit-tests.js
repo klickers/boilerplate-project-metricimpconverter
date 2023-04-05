@@ -125,3 +125,48 @@ suite("convertHandler.spellOutUnit() tests", function () {
     );
   });
 });
+
+suite("convertHandler.convert() tests", function () {
+  test("spellOutUnit() correctly converts gal to L", function () {
+    assert.equal(
+      convertHandler.convert(34, "gal"),
+      "128.7L",
+      "gal to L conversion not working correctly"
+    );
+  });
+  test("spellOutUnit() correctly converts L to gal", function () {
+    assert.equal(
+      convertHandler.convert(128.7, "L"),
+      "34gal",
+      "L to gal conversion not working correctly"
+    );
+  });
+  test("spellOutUnit() correctly converts mi to km", function () {
+    assert.equal(
+      convertHandler.convert(1.2, "mi"),
+      "1.93km",
+      "mi to km conversion not working correctly"
+    );
+  });
+  test("spellOutUnit() correctly converts km to mi", function () {
+    assert.equal(
+      convertHandler.convert(1.61, "km"),
+      "1mi",
+      "km to mi conversion not working correctly"
+    );
+  });
+  test("spellOutUnit() correctly converts lbs to kg", function () {
+    assert.equal(
+      convertHandler.convert("34", "lbs"),
+      "15.42kg",
+      "lbs to kg conversion not working correctly"
+    );
+  });
+  test("spellOutUnit() correctly converts kg to lbs", function () {
+    assert.equal(
+      convertHandler.convert("4", "kg"),
+      "8.82lbs",
+      "kg to lbs conversion not working correctly"
+    );
+  });
+});

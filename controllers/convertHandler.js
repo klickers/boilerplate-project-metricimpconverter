@@ -51,12 +51,31 @@ function ConvertHandler() {
   };
 
   this.convert = function (initNum, initUnit) {
-    const galToL = 3.78541;
-    const lbsToKg = 0.453592;
-    const miToKm = 1.60934;
-    let result;
+    let returnNum;
+    let returnUnit = this.getReturnUnit(initUnit);
 
-    return result;
+    switch (returnUnit) {
+      case "gal":
+        returnNum = initNum / this.GAL_TO_L;
+        break;
+      case "lbs":
+        returnNum = initNum / this.LBS_TO_KG;
+        break;
+      case "mi":
+        returnNum = initNum / this.MI_TO_KM;
+        break;
+      case "L":
+        returnNum = initNum * this.GAL_TO_L;
+        break;
+      case "kg":
+        returnNum = initNum * this.LBS_TO_KG;
+        break;
+      case "km":
+        returnNum = initNum * this.MI_TO_KM;
+        break;
+    }
+
+    return Math.round(returnNum * 100) / 100 + returnUnit;
   };
 
   this.getString = function (initNum, initUnit, returnNum, returnUnit) {
