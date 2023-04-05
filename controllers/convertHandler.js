@@ -1,4 +1,8 @@
 function ConvertHandler() {
+  this.GAL_TO_L = 3.78541;
+  this.LBS_TO_KG = 0.453592;
+  this.MI_TO_KM = 1.60934;
+
   this.getNum = function (input) {
     let number = input.match(/[\d.\/]+/);
 
@@ -18,9 +22,14 @@ function ConvertHandler() {
   };
 
   this.getReturnUnit = function (initUnit) {
-    let result;
-
-    return result;
+    switch (initUnit) {
+      case "gal":
+        return this.GAL_TO_L;
+      case "lbs":
+        return this.LBS_TO_KG;
+      case "mi":
+        return this.MI_TO_KM;
+    }
   };
 
   this.spellOutUnit = function (unit) {
