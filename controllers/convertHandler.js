@@ -3,6 +3,12 @@ function ConvertHandler() {
   this.LBS_TO_KG = 0.453592;
   this.MI_TO_KM = 1.60934;
 
+  this.spelledUnits = {
+    gal: "gallons",
+    lbs: "pounds",
+    mi: "miles",
+  };
+
   this.getNum = function (input) {
     let number = input.match(/[\d.\/]+/);
 
@@ -33,9 +39,7 @@ function ConvertHandler() {
   };
 
   this.spellOutUnit = function (unit) {
-    let result;
-
-    return result;
+    return this.spelledUnits[unit];
   };
 
   this.convert = function (initNum, initUnit) {

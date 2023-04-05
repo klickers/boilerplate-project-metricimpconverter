@@ -105,3 +105,23 @@ suite("convertHandler.getReturnUnit() tests", function () {
     );
   });
 });
+
+suite("convertHandler.spellOutUnit() tests", function () {
+  test("spellOutUnit() returns the spelled-out string unit for each valid input unit", function () {
+    assert.equal(
+      convertHandler.spellOutUnit("gal"),
+      "gallons",
+      "not returning correct spelled out unit for gal"
+    );
+    assert.equal(
+      convertHandler.spellOutUnit("lbs"),
+      "pounds",
+      "not returning correct spelled out unit for lbs"
+    );
+    assert.equal(
+      convertHandler.spellOutUnit("mi"),
+      "miles",
+      "not returning correct spelled out unit for mi"
+    );
+  });
+});
