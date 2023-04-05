@@ -52,30 +52,29 @@ function ConvertHandler() {
 
   this.convert = function (initNum, initUnit) {
     let returnNum;
-    let returnUnit = this.getReturnUnit(initUnit);
 
-    switch (returnUnit) {
+    switch (initUnit) {
       case "gal":
-        returnNum = initNum / this.GAL_TO_L;
-        break;
-      case "lbs":
-        returnNum = initNum / this.LBS_TO_KG;
-        break;
-      case "mi":
-        returnNum = initNum / this.MI_TO_KM;
-        break;
-      case "L":
         returnNum = initNum * this.GAL_TO_L;
         break;
-      case "kg":
+      case "lbs":
         returnNum = initNum * this.LBS_TO_KG;
         break;
-      case "km":
+      case "mi":
         returnNum = initNum * this.MI_TO_KM;
+        break;
+      case "L":
+        returnNum = initNum / this.GAL_TO_L;
+        break;
+      case "kg":
+        returnNum = initNum / this.LBS_TO_KG;
+        break;
+      case "km":
+        returnNum = initNum / this.MI_TO_KM;
         break;
     }
 
-    return Math.round(returnNum * 100000) / 100000 + returnUnit;
+    return Math.round(returnNum * 100000) / 100000;
   };
 
   this.getString = function (initNum, initUnit, returnNum, returnUnit) {

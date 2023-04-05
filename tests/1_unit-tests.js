@@ -130,42 +130,42 @@ suite("convertHandler.convert() tests", function () {
   test("spellOutUnit() correctly converts gal to L", function () {
     assert.equal(
       convertHandler.convert(34, "gal"),
-      "128.70394L",
+      "128.70394",
       "gal to L conversion not working correctly"
     );
   });
   test("spellOutUnit() correctly converts L to gal", function () {
     assert.equal(
       convertHandler.convert(128.7, "L"),
-      "33.99896gal",
+      "33.99896",
       "L to gal conversion not working correctly"
     );
   });
   test("spellOutUnit() correctly converts mi to km", function () {
     assert.equal(
       convertHandler.convert(1.2, "mi"),
-      "1.93121km",
+      "1.93121",
       "mi to km conversion not working correctly"
     );
   });
   test("spellOutUnit() correctly converts km to mi", function () {
     assert.equal(
       convertHandler.convert(1.61, "km"),
-      "1.00041mi",
+      "1.00041",
       "km to mi conversion not working correctly"
     );
   });
   test("spellOutUnit() correctly converts lbs to kg", function () {
     assert.equal(
       convertHandler.convert("34", "lbs"),
-      "15.42213kg",
+      "15.42213",
       "lbs to kg conversion not working correctly"
     );
   });
   test("spellOutUnit() correctly converts kg to lbs", function () {
     assert.equal(
       convertHandler.convert("4", "kg"),
-      "8.8185lbs",
+      "8.8185",
       "kg to lbs conversion not working correctly"
     );
   });
