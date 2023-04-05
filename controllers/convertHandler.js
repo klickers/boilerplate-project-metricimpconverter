@@ -25,8 +25,11 @@ function ConvertHandler() {
   this.getUnit = function (input) {
     let unit = input.match(/[a-zA-Z]+/);
 
-    if (unit == null || this.spelledUnits[unit] == null) return "invalid unit";
-    else return unit[0];
+    if (unit == null) return "invalid unit";
+    else {
+      unit = unit[0].toLowerCase() == "l" ? "L" : unit[0].toLowerCase();
+      return this.spelledUnits[unit] == null ? "invalid unit" : unit;
+    }
   };
 
   this.getReturnUnit = function (initUnit) {
