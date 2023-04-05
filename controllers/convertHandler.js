@@ -17,7 +17,7 @@ function ConvertHandler() {
 
     if (number == null) return 1;
     else {
-      if (number[0].split("/").length > 2) return "error";
+      if (number[0].split("/").length > 2) return "invalid number";
       else return parseFloat(eval(number[0]));
     }
   };
@@ -25,7 +25,7 @@ function ConvertHandler() {
   this.getUnit = function (input) {
     let unit = input.match(/[a-zA-Z]+/);
 
-    if (unit == null || this.spelledUnits[unit] == null) return "error";
+    if (unit == null || this.spelledUnits[unit] == null) return "invalid unit";
     else return unit[0];
   };
 

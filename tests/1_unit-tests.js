@@ -46,7 +46,7 @@ suite("convertHandler.getNum() tests", function () {
   test("getNum() returns an error on a double fraction", function () {
     assert.equal(
       convertHandler.getNum("3/4/5mi"),
-      "error",
+      "invalid number",
       "double fraction error not caught"
     );
   });
@@ -80,7 +80,7 @@ suite("convertHandler.getUnit() tests", function () {
   test("getUnit() returns an error for an invalid input unit", function () {
     assert.equal(
       convertHandler.getUnit("34kmwe"),
-      "error",
+      "invalid unit",
       "invalid input unit not returning error"
     );
   });
