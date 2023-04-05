@@ -58,3 +58,30 @@ suite("convertHandler.getNum() tests", function () {
     );
   });
 });
+
+suite("convertHandler.getUnit() tests", function () {
+  test("getUnit() can correctly read each valid input unit", function () {
+    assert.equal(
+      convertHandler.getUnit("34gal"),
+      "gal",
+      "input value of mi not read correctly"
+    );
+    assert.equal(
+      convertHandler.getUnit("65.5lbs"),
+      "lbs",
+      "input value of mi not read correctly"
+    );
+    assert.equal(
+      convertHandler.getUnit("3.5/3.4mi"),
+      "mi",
+      "input value of mi not read correctly"
+    );
+  });
+  test("getUnit() returns an error for an invalid input unit", function () {
+    assert.equal(
+      convertHandler.getUnit("34km"),
+      "error",
+      "invalid input unit not returning error"
+    );
+  });
+});
