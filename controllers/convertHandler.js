@@ -75,7 +75,7 @@ function ConvertHandler() {
         break;
     }
 
-    return Math.round(returnNum * 100) / 100 + returnUnit;
+    return Math.round(returnNum * 100000) / 100000 + returnUnit;
   };
 
   this.getString = function (initNum, initUnit, returnNum, returnUnit) {
