@@ -90,17 +90,17 @@ suite("convertHandler.getReturnUnit() tests", function () {
   test("getReturnUnit() returns the correct return unit for each valid input unit", function () {
     assert.equal(
       convertHandler.getReturnUnit("gal"),
-      convertHandler.GAL_TO_L,
+      "L",
       "not returning correct unit for gal"
     );
     assert.equal(
       convertHandler.getReturnUnit("lbs"),
-      convertHandler.LBS_TO_KG,
+      "kg",
       "not returning correct unit for lbs"
     );
     assert.equal(
       convertHandler.getReturnUnit("mi"),
-      convertHandler.MI_TO_KM,
+      "km",
       "not returning correct unit for mi"
     );
   });

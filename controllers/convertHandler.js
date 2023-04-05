@@ -30,11 +30,11 @@ function ConvertHandler() {
   this.getReturnUnit = function (initUnit) {
     switch (initUnit) {
       case "gal":
-        return this.GAL_TO_L;
+        return "L";
       case "lbs":
-        return this.LBS_TO_KG;
+        return "kg";
       case "mi":
-        return this.MI_TO_KM;
+        return "km";
     }
   };
 
